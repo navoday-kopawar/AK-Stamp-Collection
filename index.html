@@ -208,7 +208,7 @@
 
         #search {
             width: 100%;
-            padding: 16px 56px 16px 52px;
+            padding: 16px 115px 16px 52px;
             border: 2px solid var(--gold-pale);
             border-radius: 50px;
             background: rgba(253, 246, 227, 0.92);
@@ -221,6 +221,22 @@
             box-shadow: 0 4px 24px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
         }
 
+        /* Suppress browser native clear button in Webkit/Edge */
+        #search::-webkit-search-cancel-button,
+        #search::-webkit-search-decoration,
+        #search::-webkit-search-results-button,
+        #search::-webkit-search-results-decoration {
+            -webkit-appearance: none;
+            appearance: none;
+            display: none;
+        }
+
+        #search::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
         #search::placeholder {
             color: rgba(61, 31, 0, 0.4);
         }
@@ -230,13 +246,54 @@
             box-shadow: 0 4px 24px var(--shadow-warm), 0 0 0 4px rgba(200, 144, 42, 0.15), inset 0 1px 3px rgba(255, 255, 255, 0.7);
         }
 
-        .search-count {
+        .search-trailing {
             position: absolute;
-            right: 20px;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .search-count {
             font-size: 0.78rem;
             color: var(--ink-rust);
             font-weight: 700;
+            white-space: nowrap;
             pointer-events: none;
+            opacity: 0.88;
+        }
+
+        .search-clear-btn {
+            pointer-events: auto;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(139, 58, 26, 0.12);
+            color: var(--ink-rust);
+            font-size: 11px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            padding: 0;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .search-clear-btn:hover {
+            background: var(--stamp-red);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .search-clear-btn.visible {
+            display: inline-flex;
         }
 
         /* ===== CONTROLS BAR ===== */
@@ -245,8 +302,13 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 24px 28px;
-            gap: 16px;
-            flex-wrap: wrap;
+            gap: 12px;
+            flex-wrap: nowrap;
+        }
+
+        .control-group {
+            position: relative;
+            display: inline-block;
         }
 
         .controls-right {
@@ -758,44 +820,43 @@
             .gallery {
                 column-count: 2;
                 column-gap: 14px;
-                padding: 0 14px 40px
+                padding: 0 14px 40px;
             }
 
             .gallery.view-large {
-                column-count: 2
+                column-count: 2;
             }
 
             .gallery.view-xl {
-                column-count: 1
+                column-count: 1;
             }
 
             .gallery.view-small {
-                column-count: 3
+                column-count: 3;
             }
 
             .controls-bar {
                 padding: 0 14px 20px;
+                gap: 8px;
+                flex-wrap: nowrap;
             }
 
             .search-wrap {
                 padding: 0 14px;
-            }
-
-            .cat-select-btn {
-                min-width: 160px;
+                margin-bottom: 40px;
             }
         }
 
-        @media(max-width:480px) {
+        @media(max-width:680px) {
 
             .gallery.view-medium,
             .gallery,
             .gallery.view-large {
-                column-count: 1
+                column-count: 1;
             }
 
             .gallery.view-small {
-                column-count: 2
+                column-count: 2;
             }
 
             header {
@@ -807,38 +868,164 @@
                 display: none;
             }
 
+            /* Single row layout for Category, Sort, and View */
             .controls-bar {
-                padding: 0 14px 20px;
-                gap: 10px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
                 justify-content: space-between;
+                padding: 0 14px 18px;
+                gap: 8px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .cat-group {
+                flex: 1 1 0%;
+                min-width: 0;
+            }
+
+            .controls-right {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: 6px;
+                flex: 1.15 1 0%;
+                min-width: 0;
+                justify-content: flex-end;
+            }
+
+            .sort-group {
+                flex: 1 1 0%;
+                min-width: 0;
+            }
+
+            .view-group {
+                flex: 0 0 auto;
+            }
+
+            .cat-select-btn,
+            .sort-btn,
+            .view-btn {
+                height: 38px;
+                box-sizing: border-box;
+                border-radius: 9px;
+                font-size: 0.78rem;
+                display: inline-flex;
                 align-items: center;
             }
 
             .cat-select-btn {
-                min-width: 140px;
-                font-size: 0.8rem;
-                padding: 8px 12px;
+                width: 100%;
+                min-width: 0;
+                padding: 0 8px;
+                gap: 6px;
             }
 
-            .view-btn,
+            .cat-select-label {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.78rem;
+            }
+
+            .cat-select-icon {
+                font-size: 13px;
+                flex-shrink: 0;
+            }
+
+            .cat-select-chevron,
+            .sort-btn .chevron,
+            .view-btn .chevron {
+                font-size: 8px;
+                flex-shrink: 0;
+            }
+
             .sort-btn {
-                padding: 7px 10px;
-                font-size: 0.76rem;
+                width: 100%;
+                min-width: 0;
+                padding: 0 8px;
+                gap: 6px;
             }
 
+            .sort-label {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.78rem;
+            }
+
+            .sort-icon {
+                font-size: 12px;
+                flex-shrink: 0;
+            }
+
+            .view-btn {
+                padding: 0 8px;
+                gap: 4px;
+                flex-shrink: 0;
+            }
+
+            .view-btn svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            /* Search bar on mobile – keep clear button inside, move count below */
             #search {
-                font-size: 0.9rem;
-                padding: 12px 44px 12px 42px;
+                font-size: 0.88rem;
+                padding: 12px 48px 12px 38px;
             }
 
             .search-icon {
-                left: 16px;
-                font-size: 16px;
+                left: 14px;
+                font-size: 15px;
             }
 
+            /* Only show the clear button inside the trailing area on mobile */
+            .search-trailing {
+                right: 10px;
+                gap: 0;
+                flex-direction: row;
+            }
+
+            /* Move the count below the search bar on mobile */
             .search-count {
-                right: 16px;
+                position: absolute;
+                top: calc(100% + 5px);
+                left: 0;
+                right: 0;
                 font-size: 0.72rem;
+                text-align: center;
+                pointer-events: none;
+            }
+
+            .search-clear-btn {
+                width: 26px;
+                height: 26px;
+                font-size: 11px;
+            }
+
+            /* Responsive Dropdown Placements */
+            .cat-dropdown {
+                left: 0;
+                right: auto;
+                min-width: 180px;
+                max-width: 250px;
+            }
+
+            .sort-dropdown {
+                right: 0;
+                left: auto;
+                min-width: 160px;
+            }
+
+            .view-dropdown {
+                right: 0;
+                left: auto;
+                min-width: 165px;
             }
 
             .lb-card {
@@ -847,6 +1034,47 @@
 
             .lb-info {
                 padding: 16px;
+            }
+        }
+
+        @media(max-width:380px) {
+            .controls-bar {
+                padding: 0 10px 16px;
+                gap: 4px;
+            }
+
+            .controls-right {
+                gap: 4px;
+            }
+
+            .cat-select-btn,
+            .sort-btn {
+                padding: 0 6px;
+                gap: 4px;
+                font-size: 0.72rem;
+            }
+
+            .cat-select-label,
+            .sort-label {
+                font-size: 0.72rem;
+            }
+
+            .view-btn {
+                padding: 0 6px;
+            }
+
+            #search {
+                padding: 11px 96px 11px 34px;
+                font-size: 0.84rem;
+            }
+
+            .search-trailing {
+                right: 10px;
+                gap: 4px;
+            }
+
+            .search-count {
+                font-size: 0.68rem;
             }
         }
 
@@ -1342,14 +1570,17 @@
             <span class="search-icon">&#128269;</span>
             <input type="search" id="search" placeholder="Search by name, category..." autocomplete="off"
                 aria-label="Search stamps">
-            <span class="search-count" id="search-count"></span>
+            <div class="search-trailing" id="search-trailing">
+                <span class="search-count" id="search-count"></span>
+                <button type="button" class="search-clear-btn" id="search-clear" aria-label="Clear search" title="Clear search">&#10005;</button>
+            </div>
         </div>
     </div>
 
-    <!-- ===== CONTROLS BAR (Category + View) ===== -->
+    <!-- ===== CONTROLS BAR (Category + Sort + View) ===== -->
     <div class="controls-bar">
-        <!-- Category dropdown (left) -->
-        <div style="position:relative; display:inline-block;">
+        <!-- Category dropdown -->
+        <div class="control-group cat-group">
             <button class="cat-select-btn" id="cat-btn" aria-haspopup="listbox" aria-expanded="false">
                 <span class="cat-select-icon">&#127988;</span>
                 <span class="cat-select-label" id="cat-btn-label">All Stamps</span>
@@ -1382,7 +1613,7 @@
         <!-- Right controls (Sort + View) -->
         <div class="controls-right">
             <!-- Sort dropdown -->
-            <div style="position:relative; display:inline-block;">
+            <div class="control-group sort-group">
                 <button class="sort-btn" id="sort-btn" aria-haspopup="listbox" aria-expanded="false" title="Sort stamps">
                     <span class="sort-icon">&#8645;</span>
                     <span class="sort-label" id="sort-btn-label">Name (A-Z)</span>
@@ -1395,8 +1626,8 @@
                     <div class="sort-opt" data-sort="denom" role="option" aria-selected="false">Denomination</div>
                 </div>
             </div>
-            <!-- View dropdown (right) -->
-            <div style="position:relative">
+            <!-- View dropdown -->
+            <div class="control-group view-group">
                 <button class="view-btn" id="view-btn" aria-label="Layout view options" title="Change layout view" aria-haspopup="true" aria-expanded="false">
                     <svg id="view-btn-icon" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <rect x="0.5" y="0.5" width="3.8" height="3.8" rx="0.4"/>
@@ -1703,6 +1934,7 @@
         const gallery = document.getElementById('gallery');
         const searchInput = document.getElementById('search');
         const searchCount = document.getElementById('search-count');
+        const searchClearBtn = document.getElementById('search-clear');
         const noResults = document.getElementById('no-results');
         const lightbox = document.getElementById('lightbox');
         const lbImg = document.getElementById('lb-img');
@@ -1997,9 +2229,30 @@
         document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightboxOpen) closeLightbox(); });
 
         let searchDebounce;
+        function updateSearchClearBtn() {
+            if (searchInput.value.length > 0) {
+                searchClearBtn.classList.add('visible');
+            } else {
+                searchClearBtn.classList.remove('visible');
+            }
+        }
+
         searchInput.addEventListener('input', e => {
+            updateSearchClearBtn();
             clearTimeout(searchDebounce);
-            searchDebounce = setTimeout(() => { searchQuery = e.target.value.trim(); render(); }, 160);
+            searchDebounce = setTimeout(() => {
+                searchQuery = e.target.value.trim();
+                render();
+            }, 160);
+        });
+
+        searchClearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            updateSearchClearBtn();
+            searchCount.textContent = '';
+            render();
+            searchInput.focus();
         });
 
         window.addEventListener('scroll', () => { scrollBtn.classList.toggle('visible', window.scrollY > 400); });
