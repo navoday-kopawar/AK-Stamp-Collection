@@ -1,9 +1,6 @@
 # Dependencies
 node_modules/
 
-# Production build
-dist/
-
 # Static junction
 public/assets
 
