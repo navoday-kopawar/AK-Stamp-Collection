@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Stamp Collection - Rare Indian Philatelic Treasury</title>
+    <meta name="description"
+        content="Explore AK's curated collection of 25 rare Indian postage and revenue stamps - a premium philatelic treasury featuring freedom fighters, scientists, and historical icons.">
+    <meta name="keywords"
+        content="Indian stamps, philately, AK stamp collection, rare stamps, postage stamps, revenue stamps">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Lato:wght@300;400;700&family=IM+Fell+English:ital@0;1&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --ink-dark: #1a0a00;
+            --ink-brown: #3d1f00;
+            --ink-rust: #8b3a1a;
+            --gold: #c8902a;
+            --gold-light: #e8b84b;
+            --gold-pale: #f5dfa0;
+            --cream: #fdf6e3;
+            --cream-dark: #f0e6c8;
+            --stamp-red: #9b2335;
+            --stamp-blue: #1a3a6b;
+            --paper: #faf3e0;
+            --paper-aged: #efe0c0;
+            --shadow-warm: rgba(61, 31, 0, 0.18);
+            --perf: 12px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #2c1a0a;
+            color: var(--ink-dark);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Vintage paper background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(250, 243, 224, 0.97) 0%, rgba(239, 224, 192, 0.95) 60%, rgba(220, 195, 150, 0.93) 100%);
+            z-index: -1;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(61, 31, 0, 0.012) 2px, rgba(61, 31, 0, 0.012) 4px);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            position: relative;
+            text-align: center;
+            padding: 56px 24px 40px;
+            overflow: hidden;
+        }
+
+        header::before,
+        header::after {
+            content: '*';
+            position: absolute;
+            font-size: 48px;
+            color: var(--gold);
+            opacity: 0.25;
+            top: 20px;
+        }
+
+        header::before {
+            left: 32px;
+        }
+
+        header::after {
+            right: 32px;
+        }
+
+        /* Logo ring */
+        .logo-wrap {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo-ring {
+            width: 116px;
+            height: 116px;
+            display: inline-block;
+        }
+
+        .logo-inner {
+            width: 100%;
+            height: 100%;
+        }
+
+        .logo-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Branding */
+        .brand-badge {
+            display: inline-block;
+            background: var(--ink-brown);
+            color: var(--gold-light);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            padding: 4px 16px;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            border: 1px solid var(--gold);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            font-weight: 900;
+            color: var(--ink-brown);
+            line-height: 1.1;
+            margin-bottom: 6px;
+            text-shadow: 1px 2px 0 rgba(255, 255, 255, 0.6), 0 4px 16px rgba(61, 31, 0, 0.15);
+        }
+
+        h1 span {
+            color: var(--gold);
+        }
+
+        .tagline {
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            font-size: 1.05rem;
+            color: var(--ink-rust);
+            margin-bottom: 16px;
+            opacity: 0.9;
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 18px auto 0;
+            max-width: 480px;
+        }
+
+        .ornament-line {
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        }
+
+        .ornament-diamond {
+            font-size: 18px;
+            color: var(--gold);
+        }
+
+
+
+        /* ===== SEARCH ===== */
+        .search-wrap {
+            max-width: 620px;
+            margin: 0 auto 32px;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .search-inner {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            font-size: 18px;
+            color: var(--gold);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        #search {
+            width: 100%;
+            padding: 16px 115px 16px 52px;
+            border: 2px solid var(--gold-pale);
+            border-radius: 50px;
+            background: rgba(253, 246, 227, 0.92);
+            backdrop-filter: blur(8px);
+            font-family: 'Lato', sans-serif;
+            font-size: 1rem;
+            color: var(--ink-dark);
+            outline: none;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 24px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Suppress browser native clear button in Webkit/Edge */
+        #search::-webkit-search-cancel-button,
+        #search::-webkit-search-decoration,
+        #search::-webkit-search-results-button,
+        #search::-webkit-search-results-decoration {
+            -webkit-appearance: none;
+            appearance: none;
+            display: none;
+        }
+
+        #search::-ms-clear {
+            display: none;
+            width: 0;
+            height: 0;
+        }
+
+        #search::placeholder {
+            color: rgba(61, 31, 0, 0.4);
+        }
+
+        #search:focus {
+            border-color: var(--gold);
+            box-shadow: 0 4px 24px var(--shadow-warm), 0 0 0 4px rgba(200, 144, 42, 0.15), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+        }
+
+        .search-trailing {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .search-count {
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: var(--ink-rust);
+            white-space: nowrap;
+            pointer-events: none;
+            background: rgba(155, 35, 53, 0.1);
+            border: 1px solid rgba(155, 35, 53, 0.22);
+            border-radius: 20px;
+            padding: 2px 10px;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            transition: opacity 0.2s;
+        }
+
+        .search-count:empty {
+            display: none;
+        }
+
+        .search-clear-btn {
+            pointer-events: auto;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(139, 58, 26, 0.12);
+            color: var(--ink-rust);
+            font-size: 11px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            padding: 0;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+
+        .search-clear-btn:hover {
+            background: var(--stamp-red);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .search-clear-btn.visible {
+            display: inline-flex;
+        }
+
+        /* ===== CONTROLS BAR ===== */
+        .controls-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px 28px;
+            gap: 12px;
+            flex-wrap: nowrap;
+        }
+
+        .control-group {
+            position: relative;
+            display: inline-block;
+        }
+
+        .controls-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        /* ===== SORT DROPDOWN ===== */
+        .sort-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 14px;
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 10px;
+            background: rgba(253, 246, 227, 0.92);
+            backdrop-filter: blur(8px);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--ink-brown);
+            cursor: pointer;
+            transition: all 0.22s;
+            box-shadow: 0 4px 18px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+            user-select: none;
+        }
+
+        .sort-btn:hover {
+            border-color: var(--gold);
+            box-shadow: 0 6px 24px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+        }
+
+        .sort-btn.open {
+            border-color: var(--gold);
+            box-shadow: 0 6px 24px var(--shadow-warm), 0 0 0 3px rgba(200, 144, 42, 0.15);
+        }
+
+        .sort-icon {
+            font-size: 13px;
+            color: var(--gold);
+        }
+
+        .sort-btn .chevron {
+            font-size: 9px;
+            opacity: 0.55;
+            transition: transform 0.22s;
+        }
+
+        .sort-btn.open .chevron {
+            transform: rotate(180deg);
+        }
+
+        .sort-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            min-width: 175px;
+            background: #2b1e10;
+            border: 1px solid rgba(200, 144, 42, 0.32);
+            border-radius: 8px;
+            box-shadow: 0 16px 40px rgba(26, 10, 0, 0.45);
+            padding: 6px;
+            display: none;
+            flex-direction: column;
+            gap: 3px;
+            z-index: 100;
+            backdrop-filter: blur(12px);
+        }
+
+        .sort-dropdown.open {
+            display: flex;
+        }
+
+        .sort-opt {
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: rgba(240, 216, 152, 0.8);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .sort-opt:hover,
+        .sort-opt.active {
+            background: rgba(200, 144, 42, 0.25);
+            color: var(--gold-pale);
+            font-weight: 700;
+        }
+
+        /* ===== CATEGORY DROPDOWN ===== */
+
+        .cat-select-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px 10px 16px;
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 10px;
+            background: rgba(253, 246, 227, 0.92);
+            backdrop-filter: blur(8px);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--ink-brown);
+            cursor: pointer;
+            transition: all 0.22s;
+            box-shadow: 0 4px 18px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+            user-select: none;
+            min-width: 220px;
+        }
+
+        .cat-select-btn:hover {
+            border-color: var(--gold);
+            box-shadow: 0 6px 24px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+        }
+
+        .cat-select-btn.open {
+            border-color: var(--gold);
+            box-shadow: 0 6px 24px var(--shadow-warm), 0 0 0 3px rgba(200, 144, 42, 0.15);
+        }
+
+        .cat-select-icon {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .cat-select-label {
+            flex: 1;
+            text-align: left;
+        }
+
+        .cat-select-chevron {
+            font-size: 10px;
+            opacity: 0.55;
+            transition: transform 0.22s;
+            flex-shrink: 0;
+        }
+
+        .cat-select-btn.open .cat-select-chevron {
+            transform: rotate(180deg);
+        }
+
+        .cat-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            left: 0;
+            right: 0;
+            min-width: 220px;
+            background: #2b1e10;
+            border: 1px solid rgba(200, 144, 42, 0.32);
+            border-radius: 12px;
+            box-shadow: 0 20px 56px rgba(0, 0, 0, 0.48), 0 0 0 1px rgba(255, 255, 255, 0.04);
+            padding: 6px;
+            z-index: 900;
+            opacity: 0;
+            transform: translateY(-8px) scale(0.97);
+            pointer-events: none;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .cat-dropdown.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: all;
+        }
+
+        .cat-opt {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 9px 14px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.83rem;
+            font-weight: 600;
+            color: rgba(240, 216, 152, 0.78);
+            transition: background 0.15s, color 0.15s;
+            white-space: nowrap;
+        }
+
+        .cat-opt:hover {
+            background: rgba(200, 144, 42, 0.16);
+            color: var(--gold-light);
+        }
+
+        .cat-opt.active {
+            background: rgba(200, 144, 42, 0.24);
+            color: var(--gold-light);
+        }
+
+        .cat-opt-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--gold);
+            flex-shrink: 0;
+            opacity: 0;
+            transition: opacity 0.15s;
+        }
+
+        .cat-opt.active .cat-opt-dot {
+            opacity: 1;
+        }
+
+        .view-label {
+            display: none;
+        }
+
+        .view-btn {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border: 1.5px solid var(--gold-pale);
+            border-radius: 8px;
+            background: rgba(253, 246, 227, 0.92);
+            backdrop-filter: blur(8px);
+            color: #221204;
+            cursor: pointer;
+            transition: all 0.22s ease;
+            box-shadow: 0 4px 18px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+            user-select: none;
+        }
+
+        .view-btn:hover {
+            border-color: var(--gold);
+            box-shadow: 0 6px 24px var(--shadow-warm), inset 0 1px 3px rgba(255, 255, 255, 0.7);
+        }
+
+        .view-btn.open {
+            border-color: var(--gold);
+            box-shadow: 0 6px 24px var(--shadow-warm), 0 0 0 3px rgba(200, 144, 42, 0.15);
+        }
+
+        .view-btn svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            display: block;
+            color: #221204;
+        }
+
+        .view-btn .chevron {
+            font-size: 9px;
+            color: #221204;
+            opacity: 0.75;
+            transition: transform 0.22s ease;
+        }
+
+        .view-btn.open .chevron {
+            transform: rotate(180deg);
+        }
+
+        /* ===== VIEW DROPDOWN (matching reference image) ===== */
+        .view-dropdown {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            min-width: 205px;
+            background: #ebd5b3;
+            border: 1px solid #99784a;
+            border-radius: 4px;
+            box-shadow: 0 12px 36px rgba(35, 18, 5, 0.42), 0 2px 8px rgba(0, 0, 0, 0.15);
+            padding: 4px;
+            z-index: 950;
+            opacity: 0;
+            transform: translateY(-8px) scale(0.97);
+            pointer-events: none;
+            transition: opacity 0.18s ease, transform 0.18s ease;
+        }
+
+        .view-dropdown.open {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: all;
+        }
+
+        .vd-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Lato', system-ui, -apple-system, sans-serif;
+            font-size: 0.91rem;
+            font-weight: 600;
+            color: #221204;
+            transition: background 0.12s ease, color 0.12s ease;
+            white-space: nowrap;
+        }
+
+        .vd-item:hover {
+            background: rgba(160, 110, 40, 0.18);
+            color: #120700;
+        }
+
+        .vd-item.active {
+            background: rgba(140, 90, 30, 0.28);
+            color: #120700;
+            font-weight: 700;
+        }
+
+        .vd-item svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            display: block;
+            color: #221204;
+            opacity: 0.95;
+            transition: color 0.12s ease;
+        }
+
+        .vd-item:hover svg,
+        .vd-item.active svg {
+            color: #120700;
+            opacity: 1;
+        }
+
+        .vd-sep {
+            height: 1px;
+            background: rgba(150, 110, 50, 0.25);
+            margin: 3px 6px;
+        }
+
+        /* ===== NO RESULTS ===== */
+        #no-results {
+            text-align: center;
+            padding: 80px 20px;
+            display: none;
+        }
+
+        #no-results .nr-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        #no-results h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--ink-brown);
+        }
+
+        #no-results p {
+            color: var(--ink-rust);
+            margin-top: 8px;
+        }
+
+        /* ===== MASONRY GALLERY – view modes ===== */
+        .gallery {
+            column-count: 4;
+            column-gap: 20px;
+            padding: 0 20px 60px;
+        }
+
+        /* ── XL: 1 wide feature column ── */
+        .gallery.view-xl {
+            column-count: 1;
+            column-gap: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 0 20px 60px;
+        }
+
+        .gallery.view-xl .card {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        .gallery.view-xl .stamp-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            border-radius: 16px;
+            overflow: hidden;
+            min-height: 240px;
+        }
+
+        .gallery.view-xl .perfs-top,
+        .gallery.view-xl .perfs-bottom,
+        .gallery.view-xl .perfs-left,
+        .gallery.view-xl .perfs-right { display: none; }
+
+        .gallery.view-xl .stamp-img-wrap {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            padding: 18px;
+            min-height: 240px;
+            background: #160c04;
+            border-radius: 0;
+        }
+
+        .gallery.view-xl .stamp-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            max-height: 260px;
+        }
+
+        .gallery.view-xl .stamp-info {
+            grid-column: 2;
+            grid-row: 1;
+            padding: 24px 24px 12px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .gallery.view-xl .stamp-name {
+            font-size: 1.18rem;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .gallery.view-xl .stamp-meta {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .gallery.view-xl .stamp-desc-preview {
+            grid-column: 2;
+            grid-row: 2;
+            padding: 0 24px 20px;
+            font-size: 0.82rem;
+            line-height: 1.55;
+            color: rgba(26,10,0,0.7);
+            font-style: italic;
+        }
+
+        /* ── Large: 2 columns ── */
+        .gallery.view-large {
+            column-count: 2;
+            column-gap: 20px;
+        }
+
+        /* ── Medium: 3 columns (desktop default) ── */
+        .gallery.view-medium {
+            column-count: 3;
+            column-gap: 18px;
+        }
+
+        /* ── Small: 5 columns, compact tiles ── */
+        .gallery.view-small {
+            column-count: 5;
+            column-gap: 12px;
+        }
+
+        .gallery.view-small .stamp-img-wrap {
+            padding: 6px;
+        }
+
+        .gallery.view-small .stamp-info {
+            padding: 6px 4px 4px;
+        }
+
+        .gallery.view-small .stamp-name {
+            font-size: 0.72rem;
+            line-height: 1.25;
+        }
+
+        /* ── List: horizontal rows with thumb + name + meta ── */
+        .gallery.view-list {
+            display: flex;
+            flex-direction: column;
+            column-count: unset;
+            gap: 8px;
+            padding: 0 20px 60px;
+        }
+
+        .gallery.view-list .card {
+            width: 100%;
+            margin-bottom: 0;
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+
+        .gallery.view-list .stamp-body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            min-height: 64px;
+        }
+
+        .gallery.view-list .perfs-top,
+        .gallery.view-list .perfs-bottom,
+        .gallery.view-list .perfs-left,
+        .gallery.view-list .perfs-right { display: none; }
+
+        .gallery.view-list .stamp-img-wrap {
+            flex: 0 0 58px;
+            height: 52px;
+            padding: 6px 8px;
+            border-radius: 0;
+        }
+
+        .gallery.view-list .stamp-img-wrap img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .gallery.view-list .stamp-info {
+            flex: 1;
+            padding: 10px 16px;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .gallery.view-list .stamp-name {
+            font-size: 0.88rem;
+            flex: 1;
+        }
+
+        .gallery.view-list .stamp-meta {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        /* ── Details: compact table-like rows ── */
+        .gallery.view-details {
+            display: flex;
+            flex-direction: column;
+            column-count: unset;
+            gap: 4px;
+            padding: 0 20px 60px;
+        }
+
+        .gallery.view-details .card {
+            width: 100%;
+            margin-bottom: 0;
+            opacity: 1;
+            transform: none;
+            animation: none;
+        }
+
+        .gallery.view-details .stamp-body {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+            min-height: 48px;
+        }
+
+        .gallery.view-details .perfs-top,
+        .gallery.view-details .perfs-bottom,
+        .gallery.view-details .perfs-left,
+        .gallery.view-details .perfs-right { display: none; }
+
+        .gallery.view-details .stamp-img-wrap {
+            flex: 0 0 44px;
+            height: 40px;
+            padding: 4px 6px;
+            border-radius: 0;
+        }
+
+        .gallery.view-details .stamp-img-wrap img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .gallery.view-details .stamp-info {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            align-items: center;
+            padding: 8px 14px;
+            text-align: left;
+            gap: 8px;
+        }
+
+        .gallery.view-details .stamp-name {
+            font-size: 0.82rem;
+        }
+
+        .gallery.view-details .stamp-meta {
+            display: contents;
+        }
+
+        .gallery.view-details .stamp-category,
+        .gallery.view-details .stamp-denomination {
+            display: block;
+        }
+
+        @media(max-width:1100px) {
+            .gallery.view-medium,
+            .gallery {
+                column-count: 3;
+            }
+            .gallery.view-large {
+                column-count: 2;
+            }
+            .gallery.view-small {
+                column-count: 4;
+            }
+        }
+
+        @media(max-width:800px) {
+            .gallery.view-medium,
+            .gallery {
+                column-count: 2;
+                column-gap: 14px;
+                padding: 0 14px 40px;
+            }
+            .gallery.view-large {
+                column-count: 2;
+            }
+            .gallery.view-small {
+                column-count: 3;
+            }
+            .controls-bar {
+                padding: 0 14px 20px;
+                gap: 8px;
+                flex-wrap: nowrap;
+            }
+            .search-wrap {
+                padding: 0 14px;
+            }
+        }
+
+        @media(max-width:680px) {
+            /* Search wrap: extra bottom margin to clear the floating count badge */
+            .search-wrap {
+                padding: 0 14px;
+                margin-bottom: 38px;
+            }
+
+            /* Search input: right padding only for the clear × button */
+            #search {
+                font-size: 0.88rem;
+                padding: 12px 48px 12px 38px;
+            }
+
+            .search-icon {
+                left: 14px;
+                font-size: 15px;
+            }
+
+            /* Trailing: only the clear button sits inside the input on mobile */
+            .search-trailing {
+                right: 10px;
+                gap: 0;
+            }
+
+            /* Count capsule floats below the search bar, centred */
+            .search-count {
+                position: absolute;
+                top: calc(100% + 7px);
+                left: 50%;
+                transform: translateX(-50%);
+                right: auto;
+                font-size: 0.72rem;
+                white-space: nowrap;
+            }
+
+            .search-clear-btn {
+                width: 26px;
+                height: 26px;
+                font-size: 11px;
+            }
+
+            /* Gallery – mobile column counts */
+            .gallery.view-medium,
+            .gallery {
+                column-count: 2;
+                column-gap: 12px;
+                padding: 0 14px 40px;
+            }
+
+            .gallery.view-large {
+                column-count: 1;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .gallery.view-large .card {
+                width: 100%;
+                margin-bottom: 0;
+            }
+
+            .gallery.view-small {
+                column-count: 3;
+                column-gap: 8px;
+            }
+
+            /* XL on mobile: stacked single card */
+            .gallery.view-xl {
+                padding: 0 14px 40px;
+            }
+
+            .gallery.view-xl .stamp-body {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                min-height: unset;
+            }
+
+            .gallery.view-xl .stamp-img-wrap {
+                grid-column: 1;
+                grid-row: 1;
+                min-height: 180px;
+            }
+
+            .gallery.view-xl .stamp-info {
+                grid-column: 1;
+                grid-row: 2;
+                padding: 14px 16px 8px;
+            }
+
+            .gallery.view-xl .stamp-desc-preview {
+                grid-column: 1;
+                grid-row: 3;
+                padding: 0 16px 14px;
+            }
+
+            /* List / Details full-width on mobile */
+            .gallery.view-list,
+            .gallery.view-details {
+                padding: 0 14px 40px;
+            }
+
+            .gallery.view-details .stamp-info {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            /* Header */
+            header {
+                padding: 36px 14px 24px;
+            }
+
+            header::before,
+            header::after {
+                display: none;
+            }
+
+            /* Single row layout for Category + Sort + View */
+            .controls-bar {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 14px 18px;
+                gap: 8px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .cat-group {
+                flex: 1 1 0%;
+                min-width: 0;
+            }
+
+            .controls-right {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                gap: 6px;
+                flex: 1.15 1 0%;
+                min-width: 0;
+                justify-content: flex-end;
+            }
+
+            .sort-group {
+                flex: 1 1 0%;
+                min-width: 0;
+            }
+
+            .view-group {
+                flex: 0 0 auto;
+            }
+
+            .cat-select-btn,
+            .sort-btn,
+            .view-btn {
+                height: 38px;
+                box-sizing: border-box;
+                border-radius: 9px;
+                font-size: 0.78rem;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            .cat-select-btn {
+                width: 100%;
+                min-width: 0;
+                padding: 0 8px;
+                gap: 6px;
+            }
+
+            .cat-select-label {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.78rem;
+            }
+
+            .cat-select-icon { font-size: 13px; flex-shrink: 0; }
+
+            .cat-select-chevron,
+            .sort-btn .chevron,
+            .view-btn .chevron {
+                font-size: 8px;
+                flex-shrink: 0;
+            }
+
+            .sort-btn {
+                width: 100%;
+                min-width: 0;
+                padding: 0 8px;
+                gap: 6px;
+            }
+
+            .sort-label {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.78rem;
+            }
+
+            .sort-icon { font-size: 12px; flex-shrink: 0; }
+
+            .view-btn {
+                padding: 0 8px;
+                gap: 4px;
+                flex-shrink: 0;
+            }
+
+            .view-btn svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            /* Dropdown placements */
+            .cat-dropdown {
+                left: 0;
+                right: auto;
+                min-width: 180px;
+                max-width: 250px;
+            }
+
+            .sort-dropdown { right: 0; left: auto; min-width: 160px; }
+            .view-dropdown { right: 0; left: auto; min-width: 165px; }
+
+            .lb-card { max-width: 94vw; }
+            .lb-info { padding: 16px; }
+        }
+
+        @media(max-width:380px) {
+            .controls-bar { padding: 0 10px 16px; gap: 4px; }
+            .controls-right { gap: 4px; }
+            .cat-select-btn, .sort-btn { padding: 0 6px; gap: 4px; font-size: 0.72rem; }
+            .cat-select-label, .sort-label { font-size: 0.72rem; }
+            .view-btn { padding: 0 6px; }
+            #search { padding: 11px 44px 11px 34px; font-size: 0.84rem; }
+            .search-count { font-size: 0.68rem; }
+        }
+
+        /* ===== STAMP CARD ===== */
+        .card {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 24px;
+            break-inside: avoid;
+            -webkit-column-break-inside: avoid;
+            cursor: pointer;
+            position: relative;
+            opacity: 0;
+            transform: translateY(24px) scale(0.97);
+            animation: fadeIn 0.5s ease forwards;
+            filter: drop-shadow(0 4px 12px rgba(61, 31, 0, 0.15));
+            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1), filter 0.35s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            filter: drop-shadow(0 14px 28px rgba(61, 31, 0, 0.24));
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1)
+            }
+        }
+
+        .stamp-body {
+            background: var(--cream);
+            border: 1px solid rgba(200, 144, 42, 0.35);
+            position: relative;
+            padding: 10px;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+            transition: border-color 0.35s ease;
+        }
+
+        .card:hover .stamp-body {
+            border-color: var(--gold);
+        }
+
+        /* ===== STAMP PERFORATION BORDER (ALL 4 SIDES) ===== */
+        .perfs-top,
+        .perfs-bottom {
+            height: 10px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: 5;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .perfs-top {
+            top: -5px;
+        }
+
+        .perfs-bottom {
+            bottom: -5px;
+        }
+
+        .perfs-top::before,
+        .perfs-bottom::before {
+            content: '';
+            position: absolute;
+            left: -4px;
+            right: -4px;
+            height: 10px;
+            background-image: radial-gradient(circle at 50% 50%, #e2d1a8 46%, transparent 52%);
+            background-size: 10px 10px;
+            background-repeat: repeat-x;
+        }
+
+        .perfs-left,
+        .perfs-right {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 10px;
+            z-index: 5;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .perfs-left {
+            left: -5px;
+        }
+
+        .perfs-right {
+            right: -5px;
+        }
+
+        .perfs-left::before,
+        .perfs-right::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            bottom: -4px;
+            width: 10px;
+            background-image: radial-gradient(circle at 50% 50%, #e2d1a8 46%, transparent 52%);
+            background-size: 10px 10px;
+            background-repeat: repeat-y;
+        }
+
+        /* Stamp image wrap */
+        .stamp-img-wrap {
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            position: relative;
+            background: #160c04;
+            border-radius: 4px;
+            border: 1px solid rgba(200, 144, 42, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stamp-img-wrap img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2px;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), filter 0.4s ease;
+            filter: contrast(1.04) saturate(1.08);
+            object-fit: contain;
+        }
+
+        .card:hover .stamp-img-wrap img {
+            transform: scale(1.03);
+            filter: contrast(1.08) saturate(1.15);
+        }
+
+        .stamp-img-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+            transform: translateX(-120%);
+            transition: transform 0s;
+            pointer-events: none;
+        }
+
+        .card:hover .stamp-img-wrap::after {
+            transform: translateX(120%);
+            transition: transform 0.6s ease;
+        }
+
+        /* Stamp info - Name only */
+        .stamp-info {
+            padding: 12px 8px 8px;
+            text-align: center;
+            background: transparent;
+        }
+
+        .stamp-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: var(--ink-brown);
+            line-height: 1.35;
+            margin: 0;
+            transition: color 0.2s ease;
+        }
+
+        .card:hover .stamp-name {
+            color: var(--ink-rust);
+        }
+
+        /* Stamp meta (category + denom) – hidden in grid views, shown in row views */
+        .stamp-meta {
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            gap: 6px;
+            margin-top: 4px;
+        }
+
+        /* Description preview – hidden in grid views, shown only in XL view */
+        .stamp-desc-preview {
+            display: none;
+        }
+
+        /* Show meta in views that have row/expanded layouts */
+        .gallery.view-xl .stamp-meta,
+        .gallery.view-list .stamp-meta,
+        .gallery.view-details .stamp-meta {
+            display: flex;
+        }
+
+        /* Show desc preview only in XL view */
+        .gallery.view-xl .stamp-desc-preview {
+            display: block;
+        }
+
+        .stamp-category {
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--stamp-red);
+            background: rgba(155, 35, 53, 0.08);
+            padding: 2px 8px;
+            border-radius: 10px;
+        }
+
+        .stamp-denomination {
+            font-family: 'IM Fell English', serif;
+            font-size: 0.78rem;
+            color: var(--stamp-blue);
+            font-style: italic;
+            white-space: nowrap;
+        }
+
+        /* ===== LIGHTBOX ===== */
+        #lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.35s ease;
+        }
+
+        #lightbox.open {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lb-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 10, 0, 0.88);
+            backdrop-filter: blur(8px);
+        }
+
+        .lb-card {
+            position: relative;
+            z-index: 1;
+            background: var(--cream);
+            border-radius: 8px;
+            max-width: 580px;
+            width: 100%;
+            max-height: 92vh;
+            overflow-y: auto;
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5), 0 0 0 3px var(--gold);
+            transform: scale(0.88);
+            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        #lightbox.open .lb-card {
+            transform: scale(1);
+        }
+
+        .lb-img-container {
+            width: 100%;
+            max-height: 380px;
+            background: #160c04;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+            border-bottom: 2px solid rgba(200, 144, 42, 0.35);
+        }
+
+        .lb-card img {
+            width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .lb-info {
+            padding: 24px;
+        }
+
+        .lb-info h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            color: var(--ink-brown);
+            margin-bottom: 8px;
+        }
+
+        .lb-meta {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+
+        /* Lightbox Rich Details */
+        .lb-desc {
+            font-size: 0.94rem;
+            line-height: 1.6;
+            color: var(--ink-dark);
+            margin: 12px 0 16px;
+            font-style: italic;
+            border-left: 3px solid var(--gold);
+            padding: 6px 12px;
+            background: rgba(200, 144, 42, 0.06);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .lb-section {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px dashed rgba(200, 144, 42, 0.35);
+        }
+
+        .lb-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            color: var(--ink-brown);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lb-section-icon {
+            font-size: 1.05rem;
+        }
+
+        .lb-history-text {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: rgba(26, 10, 0, 0.9);
+            margin: 0;
+        }
+
+        .lb-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 10px 16px;
+            margin-top: 10px;
+            background: rgba(250, 243, 224, 0.85);
+            padding: 12px 14px;
+            border-radius: 6px;
+            border: 1px solid rgba(200, 144, 42, 0.25);
+        }
+
+        .lb-spec-row {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .lb-spec-key {
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--ink-rust);
+            font-weight: 700;
+        }
+
+        .lb-spec-val {
+            font-size: 0.84rem;
+            color: var(--ink-dark);
+            font-weight: 600;
+        }
+
+        .lb-verified-box {
+            background: rgba(26, 58, 107, 0.06);
+            border: 1px solid rgba(26, 58, 107, 0.22);
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin-top: 16px;
+        }
+
+        .lb-verified-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 700;
+            font-size: 0.82rem;
+            color: var(--stamp-blue);
+            margin-bottom: 6px;
+        }
+
+        .lb-verified-text {
+            font-size: 0.82rem;
+            line-height: 1.55;
+            color: rgba(26, 10, 0, 0.88);
+            margin: 0;
+        }
+
+        .lb-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(26, 10, 0, 0.75);
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .lb-close:hover {
+            background: var(--stamp-red);
+            transform: rotate(90deg) scale(1.1);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 32px 20px;
+            border-top: 1px solid rgba(61, 31, 0, 0.12);
+        }
+
+        footer::before {
+            content: '— AK Stamp Collection —';
+            display: block;
+            font-family: 'IM Fell English', serif;
+            font-style: italic;
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            font-size: 0.78rem;
+            color: var(--ink-rust);
+            opacity: 0.7;
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        #scroll-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: var(--ink-brown);
+            color: var(--gold-light);
+            border: 2px solid var(--gold);
+            font-size: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(61, 31, 0, 0.3);
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.3s, transform 0.3s;
+            z-index: 500;
+        }
+
+        #scroll-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #scroll-top:hover {
+            background: var(--gold);
+            color: var(--ink-dark);
+        }
+
+        @media(max-width:600px) {
+            h1 {
+                font-size: 1.8rem
+            }
+
+            .logo-ring {
+                width: 88px;
+                height: 88px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="top">
+        <div class="logo-wrap">
+            <div class="logo-ring">
+                <div class="logo-inner">
+                    <img src="assets/logo.png" alt="AK Stamp Collection Logo" id="logo-img">
+                </div>
+            </div>
+        </div>
+        <div class="brand-badge">Est. Philatelic Treasury</div>
+        <h1><span>AK</span> Stamp Collection</h1>
+        <p class="tagline">A curated treasury of India's rarest postal heritage</p>
+        <div class="ornament">
+            <div class="ornament-line"></div>
+            <span class="ornament-diamond">&#9670;</span>
+            <div class="ornament-line"></div>
+        </div>
+
+    </header>
+
+    <div class="search-wrap">
+        <div class="search-inner">
+            <span class="search-icon">&#128269;</span>
+            <input type="search" id="search" placeholder="Search by name, category..." autocomplete="off"
+                aria-label="Search stamps">
+            <div class="search-trailing" id="search-trailing">
+                <span class="search-count" id="search-count"></span>
+                <button type="button" class="search-clear-btn" id="search-clear" aria-label="Clear search" title="Clear search">&#10005;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== CONTROLS BAR (Category + Sort + View) ===== -->
+    <div class="controls-bar">
+        <!-- Category dropdown -->
+        <div class="control-group cat-group">
+            <button class="cat-select-btn" id="cat-btn" aria-haspopup="listbox" aria-expanded="false">
+                <span class="cat-select-icon">&#127988;</span>
+                <span class="cat-select-label" id="cat-btn-label">All Stamps</span>
+                <span class="cat-select-chevron">&#9660;</span>
+            </button>
+            <div class="cat-dropdown" id="cat-dropdown" role="listbox" aria-label="Filter by category">
+                <div class="cat-opt active" data-cat="all" role="option" aria-selected="true">
+                    <span class="cat-opt-dot"></span>All Stamps
+                </div>
+                <div class="cat-opt" data-cat="Freedom Fighter" role="option" aria-selected="false">
+                    <span class="cat-opt-dot"></span>Freedom Fighters
+                </div>
+                <div class="cat-opt" data-cat="Leader" role="option" aria-selected="false">
+                    <span class="cat-opt-dot"></span>Leaders
+                </div>
+                <div class="cat-opt" data-cat="Scientist" role="option" aria-selected="false">
+                    <span class="cat-opt-dot"></span>Scientists
+                </div>
+                <div class="cat-opt" data-cat="Revenue" role="option" aria-selected="false">
+                    <span class="cat-opt-dot"></span>Revenue
+                </div>
+                <div class="cat-opt" data-cat="Service" role="option" aria-selected="false">
+                    <span class="cat-opt-dot"></span>Service
+                </div>
+                <div class="cat-opt" data-cat="Series" role="option" aria-selected="false">
+                    <span class="cat-opt-dot"></span>Series &amp; Themes
+                </div>
+            </div>
+        </div>
+        <!-- Right controls (Sort + View) -->
+        <div class="controls-right">
+            <!-- Sort dropdown -->
+            <div class="control-group sort-group">
+                <button class="sort-btn" id="sort-btn" aria-haspopup="listbox" aria-expanded="false" title="Sort stamps">
+                    <span class="sort-icon">&#8645;</span>
+                    <span class="sort-label" id="sort-btn-label">Name (A-Z)</span>
+                    <span class="chevron">&#9660;</span>
+                </button>
+                <div class="sort-dropdown" id="sort-dropdown" role="listbox" aria-label="Sort stamps">
+                    <div class="sort-opt active" data-sort="name-asc" role="option" aria-selected="true">Name (A &rarr; Z)</div>
+                    <div class="sort-opt" data-sort="name-desc" role="option" aria-selected="false">Name (Z &rarr; A)</div>
+                    <div class="sort-opt" data-sort="category" role="option" aria-selected="false">Category</div>
+                    <div class="sort-opt" data-sort="denom" role="option" aria-selected="false">Denomination</div>
+                </div>
+            </div>
+            <!-- View dropdown -->
+            <div class="control-group view-group">
+                <button class="view-btn" id="view-btn" aria-label="Layout view options" title="Change layout view" aria-haspopup="true" aria-expanded="false">
+                    <svg id="view-btn-icon" width="18" height="18" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="6.1" y="0.5" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="11.7" y="0.5" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="0.5" y="6.1" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="6.1" y="6.1" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="11.7" y="6.1" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="0.5" y="11.7" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="6.1" y="11.7" width="3.8" height="3.8" rx="0.4"/>
+                        <rect x="11.7" y="11.7" width="3.8" height="3.8" rx="0.4"/>
+                    </svg>
+                    <span class="chevron">&#9660;</span>
+                </button>
+                <div class="view-dropdown" id="view-dropdown" role="menu">
+                    <!-- Large: 2 columns -->
+                    <div class="vd-item" data-view="large" role="menuitem">
+                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><rect x="0.5" y="0.5" width="6.5" height="7" rx="0.8"/><rect x="9" y="0.5" width="6.5" height="7" rx="0.8"/><rect x="0.5" y="9" width="6.5" height="7" rx="0.8"/><rect x="9" y="9" width="6.5" height="7" rx="0.8"/></svg>
+                        Large Icons
+                    </div>
+                    <!-- Medium: 3 columns (default) -->
+                    <div class="vd-item active" data-view="medium" role="menuitem">
+                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><rect x="0.5" y="0.5" width="4" height="4.5" rx="0.5"/><rect x="6" y="0.5" width="4" height="4.5" rx="0.5"/><rect x="11.5" y="0.5" width="4" height="4.5" rx="0.5"/><rect x="0.5" y="6.5" width="4" height="4.5" rx="0.5"/><rect x="6" y="6.5" width="4" height="4.5" rx="0.5"/><rect x="11.5" y="6.5" width="4" height="4.5" rx="0.5"/><rect x="0.5" y="12.5" width="4" height="3" rx="0.5"/><rect x="6" y="12.5" width="4" height="3" rx="0.5"/><rect x="11.5" y="12.5" width="4" height="3" rx="0.5"/></svg>
+                        Medium Icons
+                    </div>
+                    <!-- Small: 5 columns compact -->
+                    <div class="vd-item" data-view="small" role="menuitem">
+                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><rect x="0" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="3.4" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="6.8" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="10.2" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="13.5" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="0" y="5" width="2.5" height="3" rx="0.3"/><rect x="3.4" y="5" width="2.5" height="3" rx="0.3"/><rect x="6.8" y="5" width="2.5" height="3" rx="0.3"/><rect x="10.2" y="5" width="2.5" height="3" rx="0.3"/><rect x="13.5" y="5" width="2.5" height="3" rx="0.3"/><rect x="0" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="3.4" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="6.8" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="10.2" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="13.5" y="9.5" width="2.5" height="3" rx="0.3"/></svg>
+                        Small Icons
+                    </div>
+                    <div class="vd-sep"></div>
+                    <!-- Details: dense table rows with columns -->
+                    <div class="vd-item" data-view="details" role="menuitem">
+                        <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><line x1="0" y1="1.5" x2="16" y2="1.5" stroke="currentColor" stroke-width="2"/><rect x="0" y="4" width="2.5" height="2.5" fill="currentColor"/><line x1="4" y1="5.2" x2="8" y2="5.2" stroke="currentColor" stroke-width="1.4"/><line x1="9" y1="5.2" x2="13" y2="5.2" stroke="currentColor" stroke-width="1.4"/><line x1="0" y1="8" x2="16" y2="8" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 1.5"/><rect x="0" y="9.5" width="2.5" height="2.5" fill="currentColor"/><line x1="4" y1="10.7" x2="8" y2="10.7" stroke="currentColor" stroke-width="1.4"/><line x1="9" y1="10.7" x2="13" y2="10.7" stroke="currentColor" stroke-width="1.4"/><line x1="0" y1="13.5" x2="16" y2="13.5" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 1.5"/></svg>
+                        Details
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <main>
+        <section class="gallery" id="gallery" aria-label="Stamp gallery"></section>
+        <div id="no-results" aria-live="polite">
+            <span class="nr-icon">&#128269;</span>
+            <h3>No stamps found</h3>
+            <p>Try a different search term or category.</p>
+        </div>
+    </main>
+
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Stamp detail">
+        <div class="lb-backdrop" id="lb-backdrop"></div>
+        <div class="lb-card" id="lb-card">
+            <button class="lb-close" id="lb-close" aria-label="Close">&#10005;</button>
+            <div class="lb-img-container">
+                <img id="lb-img" src="" alt="">
+            </div>
+            <div class="lb-info">
+                <h2 id="lb-name"></h2>
+                <div class="lb-meta">
+                    <span class="stamp-category" id="lb-cat"></span>
+                    <span class="stamp-denomination" id="lb-denom"></span>
+                </div>
+                <div class="lb-body" id="lb-body"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AK Stamp Collection &middot; All rights reserved &middot; Philatelic Treasury of India</p>
+    </footer>
+
+    <button id="scroll-top" aria-label="Scroll to top" title="Back to top">&#8593;</button>
+
+    <script>
+        const STAMPS = [
+            {
+                name: "Bhagat Singh",
+                file: "Bhagat Singh.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Commemorative postage stamp honoring Shaheed Bhagat Singh, the charismatic revolutionary socialist whose patriotism ignited the Indian independence movement.",
+                history: "Bhagat Singh (1907–1931) was a legendary Indian freedom fighter. Through the Hindustan Socialist Republican Association and his martyrdom at Lahore, he became an immortal symbol of national defiance and youth mobilization against British colonial rule."
+            },
+            {
+                name: "Chhatrapati Shivaji Maharaj",
+                file: "Chhatrapati Shivaji Maharaj.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Postage stamp celebrating Chhatrapati Shivaji Maharaj, visionary founder of the Maratha Empire and revered pioneer of Indian military strategy.",
+                history: "Chhatrapati Shivaji Maharaj (1630–1680) founded the Maratha state, establishing an equitable administration, pioneering Ganimi Kava (guerrilla warfare), and commissioning a formidable naval fleet to safeguard India's western coastline."
+            },
+            {
+                name: "Dr. B. R. Ambedkar",
+                file: "Dr. B. R. Ambedkar.png",
+                cat: "Leader",
+                denom: "Postage Stamp",
+                desc: "Commemorative stamp dedicated to Babasaheb Dr. B. R. Ambedkar, Chief Architect of the Constitution of India and champion of social justice.",
+                history: "Dr. Bhimrao Ramji Ambedkar (1891–1956) was a towering jurist, economist, and statesman who chaired the Drafting Committee of the Indian Constitution, dedicating his life to universal human rights, education, and social equality."
+            },
+            {
+                name: "Fisherman \u2013 20 Paise",
+                file: "Fisherman \u2013 20 Paise.png",
+                cat: "Series",
+                denom: "20 Paise",
+                desc: "Definitive postage stamp highlighting traditional Indian marine livelihoods and coastal fishing heritage.",
+                history: "Issued under India Post's occupational definitive series, celebrating the artisan maritime communities and traditional seafaring heritage that sustain coastal economies."
+            },
+            {
+                name: "Indira Gandhi",
+                file: "Indira Gandhi.png",
+                cat: "Leader",
+                denom: "Postage Stamp",
+                desc: "Definitive memorial issue commemorating Indira Gandhi, India's first female Prime Minister.",
+                history: "Indira Priyadarshini Gandhi (1917–1984) served four historic terms as Prime Minister of India, presiding over the Green Revolution, national scientific advancements, and strategic self-reliance."
+            },
+            {
+                name: "Jayaprakash Narayan",
+                file: "Jayaprakash Narayan.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Postage stamp honoring Loknayak Jayaprakash Narayan, freedom fighter and architect of the Total Revolution movement.",
+                history: "Jayaprakash Narayan (1902–1979) was an acclaimed socialist theorist and independence activist who played a central role in the Quit India movement and later championed democratic renewal across India."
+            },
+            {
+                name: "Maharana Pratap \u2013 \u20b91000",
+                file: "Maharana Pratap - \u20b91000.png",
+                cat: "Freedom Fighter",
+                denom: "\u20b91000 (1000p)",
+                desc: "Definitive postage stamp honoring Maharana Pratap, the revered 13th monarch of Mewar celebrated for his indomitable valor, chivalry, and unyielding defense of Indian sovereignty.",
+                history: "Maharana Pratap Singh I (c. 1540\u20131597) was the Hindu Rajput ruler of Mewar in present-day Rajasthan. Renowned for defying the expansionist forces of Mughal Emperor Akbar, he led the historic defense at the Battle of Haldighati (1576) with his faithful steed Chetak and waged decisive guerrilla warfare across the Aravalli mountains, successfully recapturing virtually all of Mewar during his lifetime.",
+                specs: {
+                    series: "11th Definitive Series \u2013 Makers of India",
+                    issueDate: "June 1, 2016",
+                    faceValue: "1000 Paise (\u20b910.00)",
+                    catalogDenom: "\u20b91000 / 1000p",
+                    printing: "Photogravure on Fluorescent Stamp Paper",
+                    perforation: "Comb 13 \u00d7 13",
+                    printer: "India Security Press, Nashik",
+                    verifiedNote: "The stamp features the numeral '1000' in the upper-left corner designating 1000 Paise (\u20b910 face value) in India Post's 11th Definitive Series ('Makers of India'). Within collection inventory and asset nomenclature, it is cataloged as \u20b91000 / 1000p. All biographical and historical military records of Maharana Pratap are verified against primary Indian historical documentation."
+                }
+            },
+            {
+                name: "Mahatma Gandhi",
+                file: "Mahatma Gandhi.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Definitive postal issue depicting Mohandas Karamchand Gandhi, Father of the Nation.",
+                history: "Mahatma Gandhi (1869–1948) led the nationwide movement for India's independence through non-violent resistance (Satyagraha) and Ahimsa, inspiring freedom and civil rights movements globally."
+            },
+            {
+                name: "Marine Fish \u2013 5 Paise",
+                file: "Marine Fish \u2013 5 Paise.png",
+                cat: "Series",
+                denom: "5 Paise",
+                desc: "Definitive postage stamp capturing the vibrant marine biodiversity of the Indian Ocean.",
+                history: "Part of India Post's definitive natural heritage and wildlife series, spotlighting indigenous marine aquatic life and environmental conservation."
+            },
+            {
+                name: "Maulana Abul Kalam Azad",
+                file: "Maulana Abul Kalam Azad.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Postage stamp honoring Maulana Abul Kalam Azad, visionary independence leader, scholar, and India's first Minister of Education.",
+                history: "Maulana Azad (1888–1958) was an intellectual, journalist, and senior Congress leader who championed communal harmony and laid the foundations of modern Indian higher education, founding the IITs, IISc, and UGC."
+            },
+            {
+                name: "Mother Teresa",
+                file: "Mother Teresa.png",
+                cat: "Leader",
+                denom: "Postage Stamp",
+                desc: "Commemorative postage stamp honoring Saint Mother Teresa of Calcutta, Nobel Peace Prize laureate.",
+                history: "Mother Teresa (1910–1997) founded the Missionaries of Charity in Kolkata in 1950, dedicating over four decades to serving the destitute, sick, and marginalized across the world."
+            },
+            {
+                name: "Rajiv Gandhi",
+                file: "Rajiv Gandhi.png",
+                cat: "Leader",
+                denom: "Postage Stamp",
+                desc: "Memorial postage stamp honoring Rajiv Gandhi, the 6th Prime Minister of India.",
+                history: "Rajiv Gandhi (1944–1991) assumed leadership as India's youngest Prime Minister, pioneering nationwide telecom access, computational modernization, and youth political participation."
+            },
+            {
+                name: "Ram Manohar Lohia",
+                file: "Ram Manohar Lohia.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Postage stamp commemorating Dr. Ram Manohar Lohia, fearless socialist reformer and freedom activist.",
+                history: "Dr. Lohia (1910–1967) was a prominent leader in the Quit India movement who broadcast clandestine radio bulletins and subsequently spearheaded egalitarian socialist policies in sovereign India."
+            },
+            {
+                name: "Revenue Stamp \u2013 100 Paise (Type I)",
+                file: "Revenue Stamp \u2013 100 Paise (Type I).png",
+                cat: "Revenue",
+                denom: "100 Paise",
+                desc: "Type I non-postal fiscal revenue stamp for legal receipts, statutory duties, and financial agreements.",
+                history: "Indian fiscal stamps validate legal and commercial instruments under the Indian Stamp Act, providing statutory recognition to contracts, money receipts, and notarizations."
+            },
+            {
+                name: "Revenue Stamp \u2013 100 Paise (Type II)",
+                file: "Revenue Stamp \u2013 100 Paise (Type II).png",
+                cat: "Revenue",
+                denom: "100 Paise",
+                desc: "Type II updated edition of the 100 Paise statutory fiscal revenue stamp.",
+                history: "Updated printing with enhanced security guilloche and micro-lettering used for civil notarization, statutory fees, and legal transactions."
+            },
+            {
+                name: "Revenue Stamp \u2013 \u20b9100",
+                file: "Revenue Stamp \u2013 \u20b9100.png",
+                cat: "Revenue",
+                denom: "\u20b9100",
+                desc: "High-denomination \u20b9100 Indian fiscal revenue stamp for property deeds, mortgages, and formal contracts.",
+                history: "High-value revenue stamps authenticate property conveyancing, company deeds, and significant commercial contracts across Indian judicial and registrar jurisdictions."
+            },
+            {
+                name: "Satyajit Ray",
+                file: "Satyajit Ray.png",
+                cat: "Leader",
+                denom: "Postage Stamp",
+                desc: "Commemorative postage stamp honoring Satyajit Ray, world-renowned cinematic auteur, author, and illustrator.",
+                history: "Satyajit Ray (1921–1992) revolutionized Indian and world cinema through masterworks like The Apu Trilogy, Charulata, and Shatranj Ke Khilari, receiving an Academy Honorary Award in 1992."
+            },
+            {
+                name: "Scorpio (Zodiac Series)",
+                file: "Scorpio (Zodiac Series).png",
+                cat: "Series",
+                denom: "Zodiac Series",
+                desc: "Artistic philatelic release depicting Vrishchika (Scorpio) from India Post's Zodiac thematic series.",
+                history: "Part of an acclaimed thematic series fusing classical Vedic astronomical constellations with modern graphic stamp art."
+            },
+            {
+                name: "Service Stamp \u2013 \u20b9100",
+                file: "Service Stamp \u2013 \u20b9100.png",
+                cat: "Service",
+                denom: "\u20b9100",
+                desc: "Official \u20b9100 Government of India Service Stamp designated exclusively for official ministerial and state correspondence.",
+                history: "Service stamps prepay postage on official communications of authorized departments of the Government of India, carrying legal accountability in transit."
+            },
+            {
+                name: "Service Stamp \u2013 \u20b9200",
+                file: "Service Stamp \u2013 \u20b9200.png",
+                cat: "Service",
+                denom: "\u20b9200",
+                desc: "Official \u20b9200 departmental service stamp for high-weight governmental dispatches.",
+                history: "Employed for registered official documents, judicial records, and confidential ministerial correspondence throughout government postal networks."
+            },
+            {
+                name: "Service Stamp \u2013 \u20b9500",
+                file: "Service Stamp \u2013 \u20b9500.png",
+                cat: "Service",
+                denom: "\u20b9500",
+                desc: "Premier \u20b9500 high-denomination official departmental service stamp for major government dispatch packets.",
+                history: "The highest denomination tier in the modern official service series, applied to diplomatic pouches, heavy parliamentary records, and high-security state dispatches."
+            },
+            {
+                name: "Sir C. V. Raman",
+                file: "Sir C. V. Raman.png",
+                cat: "Scientist",
+                denom: "Postage Stamp",
+                desc: "Commemorative stamp celebrating Sir Chandrasekhara Venkata Raman, Nobel Laureate in Physics.",
+                history: "Sir C. V. Raman (1888–1970) was awarded the 1930 Nobel Prize in Physics for discovering the Raman Effect in inelastic light scattering, establishing India on the vanguard of experimental physics."
+            },
+            {
+                name: "Srinivasa Ramanujan",
+                file: "Srinivasa Ramanujan.png",
+                cat: "Scientist",
+                denom: "Postage Stamp",
+                desc: "Commemorative postage stamp honoring mathematical genius Srinivasa Ramanujan.",
+                history: "Srinivasa Ramanujan (1887–1920) was a mathematical prodigy whose groundbreaking discoveries in elliptic functions, mock theta functions, and infinite series continue to transform modern mathematics and theoretical physics."
+            },
+            {
+                name: "Subramania Bharati",
+                file: "Subramania Bharati.png",
+                cat: "Freedom Fighter",
+                denom: "Postage Stamp",
+                desc: "Commemorative postage stamp honoring Mahakavi Subramania Bharati, patriotic Tamil poet and visionary social reformer.",
+                history: "Subramania Bharati (1882–1921) galvanized the Indian freedom struggle in Southern India through fiery patriotic songs, advocacy for women's liberation, and pioneering modern Tamil poetry."
+            },
+            {
+                name: "Syama Prasad Mookerjee",
+                file: "Syama Prasad Mookerjee.png",
+                cat: "Leader",
+                denom: "Postage Stamp",
+                desc: "Commemorative postage stamp honoring Dr. Syama Prasad Mookerjee, barrister, academician, and statesman.",
+                history: "Dr. Syama Prasad Mookerjee (1901–1953) served as India's first Minister for Industry and Supply, founding the Chittaranjan Locomotive Works and spearheading industrial policy before founding the Bharatiya Jana Sangh."
+            }
+        ];
+
+        let activeCategory = 'all', searchQuery = '', lightboxOpen = false;
+        let activeSort = 'name-asc';
+
+        const gallery = document.getElementById('gallery');
+        const searchInput = document.getElementById('search');
+        const searchCount = document.getElementById('search-count');
+        const searchClearBtn = document.getElementById('search-clear');
+        const noResults = document.getElementById('no-results');
+        const lightbox = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lb-img');
+        const lbName = document.getElementById('lb-name');
+        const lbCat = document.getElementById('lb-cat');
+        const lbDenom = document.getElementById('lb-denom');
+        const lbBody = document.getElementById('lb-body');
+        const lbClose = document.getElementById('lb-close');
+        const lbBackdrop = document.getElementById('lb-backdrop');
+        const scrollBtn = document.getElementById('scroll-top');
+
+        /* ===== CATEGORY DROPDOWN ===== */
+        const catBtn = document.getElementById('cat-btn');
+        const catDropdown = document.getElementById('cat-dropdown');
+        const catBtnLabel = document.getElementById('cat-btn-label');
+
+        const CAT_LABELS = {
+            'all': 'All Stamps',
+            'Freedom Fighter': 'Freedom Fighters',
+            'Leader': 'Leaders',
+            'Scientist': 'Scientists',
+            'Revenue': 'Revenue',
+            'Service': 'Service',
+            'Series': 'Series & Themes'
+        };
+
+        function toggleCatDropdown(force) {
+            const isOpen = catDropdown.classList.contains('open');
+            const shouldOpen = (force !== undefined) ? force : !isOpen;
+            catDropdown.classList.toggle('open', shouldOpen);
+            catBtn.classList.toggle('open', shouldOpen);
+            catBtn.setAttribute('aria-expanded', String(shouldOpen));
+        }
+
+        catBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleViewDropdown(false);
+            toggleSortDropdown(false);
+            toggleCatDropdown();
+        });
+
+        catDropdown.addEventListener('click', (e) => {
+            const opt = e.target.closest('.cat-opt');
+            if (!opt) return;
+            activeCategory = opt.dataset.cat;
+            catBtnLabel.textContent = CAT_LABELS[activeCategory] || activeCategory;
+            document.querySelectorAll('.cat-opt').forEach(o => {
+                o.classList.toggle('active', o.dataset.cat === activeCategory);
+                o.setAttribute('aria-selected', String(o.dataset.cat === activeCategory));
+            });
+            toggleCatDropdown(false);
+            render();
+        });
+
+        /* ===== SORT DROPDOWN ===== */
+        const sortBtn = document.getElementById('sort-btn');
+        const sortDropdown = document.getElementById('sort-dropdown');
+        const sortBtnLabel = document.getElementById('sort-btn-label');
+
+        const SORT_LABELS = {
+            'name-asc': 'Name (A-Z)',
+            'name-desc': 'Name (Z-A)',
+            'category': 'Category',
+            'denom': 'Denomination'
+        };
+
+        function toggleSortDropdown(force) {
+            const isOpen = sortDropdown.classList.contains('open');
+            const shouldOpen = (force !== undefined) ? force : !isOpen;
+            sortDropdown.classList.toggle('open', shouldOpen);
+            sortBtn.classList.toggle('open', shouldOpen);
+            sortBtn.setAttribute('aria-expanded', String(shouldOpen));
+        }
+
+        sortBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCatDropdown(false);
+            toggleViewDropdown(false);
+            toggleSortDropdown();
+        });
+
+        sortDropdown.addEventListener('click', (e) => {
+            const opt = e.target.closest('.sort-opt');
+            if (!opt || !opt.dataset.sort) return;
+            activeSort = opt.dataset.sort;
+            sortBtnLabel.textContent = SORT_LABELS[activeSort] || 'Sort';
+            document.querySelectorAll('.sort-opt').forEach(o => {
+                const isSel = o.dataset.sort === activeSort;
+                o.classList.toggle('active', isSel);
+                o.setAttribute('aria-selected', String(isSel));
+            });
+            toggleSortDropdown(false);
+            render();
+        });
+
+        /* ===== VIEW DROPDOWN ===== */
+        const viewBtn = document.getElementById('view-btn');
+        const viewDropdown = document.getElementById('view-dropdown');
+        const viewBtnIcon = document.getElementById('view-btn-icon');
+        const viewBtnLabel = document.getElementById('view-btn-label');
+
+        let activeView = 'medium';
+
+        const VIEW_META = {
+            'large':   { label: 'Large Icons',  svg: '<rect x="0.5" y="0.5" width="6.5" height="7" rx="0.8"/><rect x="9" y="0.5" width="6.5" height="7" rx="0.8"/><rect x="0.5" y="9" width="6.5" height="7" rx="0.8"/><rect x="9" y="9" width="6.5" height="7" rx="0.8"/>' },
+            'medium':  { label: 'Medium Icons', svg: '<rect x="0.5" y="0.5" width="4" height="4.5" rx="0.5"/><rect x="6" y="0.5" width="4" height="4.5" rx="0.5"/><rect x="11.5" y="0.5" width="4" height="4.5" rx="0.5"/><rect x="0.5" y="6.5" width="4" height="4.5" rx="0.5"/><rect x="6" y="6.5" width="4" height="4.5" rx="0.5"/><rect x="11.5" y="6.5" width="4" height="4.5" rx="0.5"/><rect x="0.5" y="12.5" width="4" height="3" rx="0.5"/><rect x="6" y="12.5" width="4" height="3" rx="0.5"/><rect x="11.5" y="12.5" width="4" height="3" rx="0.5"/>' },
+            'small':   { label: 'Small Icons',  svg: '<rect x="0" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="3.4" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="6.8" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="10.2" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="13.5" y="0.5" width="2.5" height="3" rx="0.3"/><rect x="0" y="5" width="2.5" height="3" rx="0.3"/><rect x="3.4" y="5" width="2.5" height="3" rx="0.3"/><rect x="6.8" y="5" width="2.5" height="3" rx="0.3"/><rect x="10.2" y="5" width="2.5" height="3" rx="0.3"/><rect x="13.5" y="5" width="2.5" height="3" rx="0.3"/><rect x="0" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="3.4" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="6.8" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="10.2" y="9.5" width="2.5" height="3" rx="0.3"/><rect x="13.5" y="9.5" width="2.5" height="3" rx="0.3"/>' },
+            'details': { label: 'Details',       svg: '<line x1="0" y1="1.5" x2="16" y2="1.5" stroke="currentColor" stroke-width="2"/><rect x="0" y="4" width="2.5" height="2.5" fill="currentColor"/><line x1="4" y1="5.2" x2="8" y2="5.2" stroke="currentColor" stroke-width="1.4"/><line x1="9" y1="5.2" x2="13" y2="5.2" stroke="currentColor" stroke-width="1.4"/><line x1="0" y1="8" x2="16" y2="8" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 1.5"/><rect x="0" y="9.5" width="2.5" height="2.5" fill="currentColor"/><line x1="4" y1="10.7" x2="8" y2="10.7" stroke="currentColor" stroke-width="1.4"/><line x1="9" y1="10.7" x2="13" y2="10.7" stroke="currentColor" stroke-width="1.4"/><line x1="0" y1="13.5" x2="16" y2="13.5" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 1.5"/>' },
+        };
+
+        function applyView(viewKey) {
+            Object.keys(VIEW_META).forEach(k => gallery.classList.remove('view-' + k));
+            gallery.classList.add('view-' + viewKey);
+            activeView = viewKey;
+            const meta = VIEW_META[viewKey];
+            if (viewBtnIcon) viewBtnIcon.innerHTML = meta.svg;
+            if (viewBtnLabel) viewBtnLabel.textContent = meta.label;
+            document.querySelectorAll('.vd-item').forEach(item => {
+                item.classList.toggle('active', item.dataset.view === viewKey);
+            });
+        }
+
+        function toggleViewDropdown(force) {
+            const shouldOpen = (force !== undefined) ? force : !viewDropdown.classList.contains('open');
+            viewDropdown.classList.toggle('open', shouldOpen);
+            viewBtn.classList.toggle('open', shouldOpen);
+            viewBtn.setAttribute('aria-expanded', String(shouldOpen));
+        }
+
+        viewBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleCatDropdown(false);
+            toggleSortDropdown(false);
+            toggleViewDropdown();
+        });
+
+        viewDropdown.addEventListener('click', (e) => {
+            const item = e.target.closest('.vd-item');
+            if (!item || !item.dataset.view) return;
+            applyView(item.dataset.view);
+            toggleViewDropdown(false);
+        });
+
+        // Global click and Escape listeners
+        document.addEventListener('click', () => {
+            toggleCatDropdown(false);
+            toggleSortDropdown(false);
+            toggleViewDropdown(false);
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                toggleCatDropdown(false);
+                toggleSortDropdown(false);
+                toggleViewDropdown(false);
+            }
+        });
+
+        function sortList(list) {
+            return list.slice().sort((a, b) => {
+                if (activeSort === 'name-asc') {
+                    return a.name.localeCompare(b.name, undefined, { sensitivity: 'base' });
+                } else if (activeSort === 'name-desc') {
+                    return b.name.localeCompare(a.name, undefined, { sensitivity: 'base' });
+                } else if (activeSort === 'category') {
+                    const c = a.cat.localeCompare(b.cat);
+                    return c !== 0 ? c : a.name.localeCompare(b.name);
+                } else if (activeSort === 'denom') {
+                    return a.denom.localeCompare(b.denom);
+                }
+                return 0;
+            });
+        }
+
+        function filtered() {
+            const q = searchQuery.toLowerCase();
+            const list = STAMPS.filter(s => {
+                const matchCat = activeCategory === 'all' || s.cat === activeCategory;
+                const matchSrch = !q ||
+                    s.name.toLowerCase().includes(q) ||
+                    s.cat.toLowerCase().includes(q) ||
+                    s.denom.toLowerCase().includes(q) ||
+                    (s.desc && s.desc.toLowerCase().includes(q)) ||
+                    (s.history && s.history.toLowerCase().includes(q)) ||
+                    (s.specs && JSON.stringify(s.specs).toLowerCase().includes(q));
+                return matchCat && matchSrch;
+            });
+            return sortList(list);
+        }
+
+        function render() {
+            const list = filtered();
+            gallery.innerHTML = '';
+            if (list.length === 0) {
+                noResults.style.display = 'block';
+                searchCount.textContent = '';
+                return;
+            }
+            noResults.style.display = 'none';
+            searchCount.textContent = searchQuery ? list.length + ' found' : '';
+            list.forEach((stamp, idx) => {
+                const card = document.createElement('article');
+                card.className = 'card';
+                card.style.animationDelay = (idx * 35) + 'ms';
+                card.setAttribute('tabindex', '0');
+                card.setAttribute('role', 'button');
+                card.setAttribute('aria-label', stamp.name + ' stamp');
+                const src = 'assets/' + encodeURIComponent(stamp.file);
+                const descPreview = stamp.desc ? stamp.desc.slice(0, 110) + (stamp.desc.length > 110 ? '\u2026' : '') : '';
+                card.innerHTML = `
+          <div class="stamp-body">
+            <div class="perfs-top"></div>
+            <div class="perfs-left"></div>
+            <div class="perfs-right"></div>
+            <div class="stamp-img-wrap">
+              <img loading="lazy" src="${src}" alt="${stamp.name} Indian Stamp" onerror="this.style.minHeight='180px';this.style.background='#e8dfc8'">
+            </div>
+            <div class="stamp-info">
+              <h3 class="stamp-name">${stamp.name}</h3>
+              <div class="stamp-meta">
+                <span class="stamp-category">${stamp.cat}</span>
+                <span class="stamp-denomination">${stamp.denom}</span>
+              </div>
+            </div>
+            ${descPreview ? `<div class="stamp-desc-preview">${descPreview}</div>` : ''}
+            <div class="perfs-bottom"></div>
+          </div>`;
+                const open = () => openLightbox(stamp);
+                card.addEventListener('click', open);
+                card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') open(); });
+                gallery.appendChild(card);
+            });
+        }
+
+        function openLightbox(stamp) {
+            lbImg.src = 'assets/' + encodeURIComponent(stamp.file);
+            lbImg.alt = stamp.name;
+            lbName.textContent = stamp.name;
+            lbCat.textContent = stamp.cat;
+            lbDenom.textContent = stamp.denom;
+
+            let bodyHtml = '';
+            if (stamp.desc) {
+                bodyHtml += `<p class="lb-desc">${stamp.desc}</p>`;
+            }
+            if (stamp.history) {
+                bodyHtml += `
+                <div class="lb-section">
+                    <h4 class="lb-section-title"><span class="lb-section-icon">&#128220;</span> Historical Background</h4>
+                    <p class="lb-history-text">${stamp.history}</p>
+                </div>`;
+            }
+            if (stamp.specs) {
+                bodyHtml += `
+                <div class="lb-section">
+                    <h4 class="lb-section-title"><span class="lb-section-icon">&#128394;</span> Philatelic Specifications</h4>
+                    <div class="lb-specs-grid">
+                        ${stamp.specs.series ? `<div class="lb-spec-row"><span class="lb-spec-key">Series</span><span class="lb-spec-val">${stamp.specs.series}</span></div>` : ''}
+                        ${stamp.specs.issueDate ? `<div class="lb-spec-row"><span class="lb-spec-key">Issue Date</span><span class="lb-spec-val">${stamp.specs.issueDate}</span></div>` : ''}
+                        ${stamp.specs.faceValue ? `<div class="lb-spec-row"><span class="lb-spec-key">Face Value</span><span class="lb-spec-val">${stamp.specs.faceValue}</span></div>` : ''}
+                        ${stamp.specs.catalogDenom ? `<div class="lb-spec-row"><span class="lb-spec-key">Denomination</span><span class="lb-spec-val">${stamp.specs.catalogDenom}</span></div>` : ''}
+                        ${stamp.specs.printing ? `<div class="lb-spec-row"><span class="lb-spec-key">Printing / Paper</span><span class="lb-spec-val">${stamp.specs.printing}</span></div>` : ''}
+                        ${stamp.specs.perforation ? `<div class="lb-spec-row"><span class="lb-spec-key">Perforation</span><span class="lb-spec-val">${stamp.specs.perforation}</span></div>` : ''}
+                        ${stamp.specs.printer ? `<div class="lb-spec-row"><span class="lb-spec-key">Security Printer</span><span class="lb-spec-val">${stamp.specs.printer}</span></div>` : ''}
+                    </div>
+                </div>`;
+                if (stamp.specs.verifiedNote) {
+                    bodyHtml += `
+                    <div class="lb-section lb-verified-box">
+                        <div class="lb-verified-header">
+                            <span class="lb-verified-icon">&#9989;</span>
+                            <span class="lb-verified-title">Authentication &amp; Catalog Verification</span>
+                        </div>
+                        <p class="lb-verified-text">${stamp.specs.verifiedNote}</p>
+                    </div>`;
+                }
+            }
+            lbBody.innerHTML = bodyHtml;
+
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            lightboxOpen = true;
+            lbClose.focus();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            document.body.style.overflow = '';
+            lightboxOpen = false;
+        }
+
+        lbClose.addEventListener('click', closeLightbox);
+        lbBackdrop.addEventListener('click', closeLightbox);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightboxOpen) closeLightbox(); });
+
+        let searchDebounce;
+        function updateSearchClearBtn() {
+            if (searchInput.value.length > 0) {
+                searchClearBtn.classList.add('visible');
+            } else {
+                searchClearBtn.classList.remove('visible');
+            }
+        }
+
+        searchInput.addEventListener('input', e => {
+            updateSearchClearBtn();
+            clearTimeout(searchDebounce);
+            searchDebounce = setTimeout(() => {
+                searchQuery = e.target.value.trim();
+                render();
+            }, 160);
+        });
+
+        searchClearBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            searchQuery = '';
+            updateSearchClearBtn();
+            searchCount.textContent = '';
+            render();
+            searchInput.focus();
+        });
+
+        window.addEventListener('scroll', () => { scrollBtn.classList.toggle('visible', window.scrollY > 400); });
+        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        document.getElementById('logo-img').onerror = function () {
+            this.parentElement.style.background = 'linear-gradient(135deg,#3d1f00 0%,#8b3a1a 100%)';
+            this.style.display = 'none';
+        };
+
+        applyView('medium');
+        render();
+    </script>
+
+</body>
+
+</html>

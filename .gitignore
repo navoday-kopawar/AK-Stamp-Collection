@@ -1,3 +1,12 @@
+# Dependencies
+node_modules/
+
+# Production build
+dist/
+
+# Static junction
+public/assets
+
 # Ignore large zip archives
 *.zip
 StampsCollection.zip
